@@ -159,13 +159,7 @@ Example device response:
 
 ## AI Usage
 
-<!-- EDIT THIS SECTION so it is true for you. Reviewers ask about it. -->
-
-- **Tools used:** Claude, for planning the architecture and drafting the code.
-- **What I used them for:** choosing the stack and folder structure, drafting the service,
-  routes, tests and simulator.
-- **One suggestion I changed:** _write your own here_, e.g. the AI first suggested
-  TypeScript and MongoDB; I kept plain JavaScript and an in-memory repository to fit the
-  time limit.
-- **One thing I verified myself:** _write your own here_, e.g. I ran `npm test`, then ran
-  the simulator, stopped one device, and confirmed it turned OFFLINE after 30 seconds.
+- **Tools used:** Claude and ChatGPT.
+- **What I used them for:** ChatGPT for an initial project structure and stack suggestions; Claude for reviewing that plan, drafting the service, routes, validation, tests and simulator, and for the README structure.
+- **One suggestion I changed or rejected:** ChatGPT suggested a MongoDB-first design with separate controller and model layers (and leaned towards TypeScript). I dropped the controller and model layers, used plain JavaScript, and built an in-memory repository first, because the brief doesn't require a database and I had limited time. The repository layer keeps it easy to add MongoDB later.
+- **One thing I verified myself:** I ran `npm test` in a fresh GitHub Codespace on the pushed repo, then started the server and the simulator, stopped one device, and confirmed it turned OFFLINE after about 30 seconds.
